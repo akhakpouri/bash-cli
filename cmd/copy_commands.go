@@ -8,6 +8,13 @@ import (
 	"path/filepath"
 )
 
+const (
+	red    = "\033[0;31m"
+	green  = "\033[0;32m"
+	yellow = "\033[0;33m"
+	none   = "\033[0m" // Reset to default color
+)
+
 func RecusiveCopy(dir string, source string, destination string) {
 	found := false
 	err := filepath.WalkDir(dir, func(path string, d os.DirEntry, err error) error {
