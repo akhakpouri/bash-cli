@@ -5,7 +5,7 @@ import (
 )
 
 var copyCommand = &cobra.Command{
-	Use:     "cpr",
+	Use:     "cp",
 	Aliases: []string{"copy", "recursive"},
 	Short:   "Recusrive copy",
 	Long:    "Look for a file name recursively in a directory",
