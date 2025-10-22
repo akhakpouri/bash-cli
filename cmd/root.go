@@ -20,3 +20,7 @@ func Execute() {
 		os.Exit(1)
 	}
 }
+
+func SetVersionInfo(ver, comm, d string) {
+	root.Version = fmt.Sprintf("%s (Built on %s from Git SHA %s)", ver, d, comm)
+}
