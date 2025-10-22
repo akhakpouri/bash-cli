@@ -1,6 +1,10 @@
 package cmd
 
-import "github.com/spf13/cobra"
+import (
+	"fmt"
+
+	"github.com/spf13/cobra"
+)
 
 var helpCommand = &cobra.Command{
 	Use:     "help",
@@ -14,7 +18,15 @@ var helpCommand = &cobra.Command{
 }
 
 func help() {
+	message := `zap helps with basic operation commands.
+	
+Commands:
+	cp	copy, and rename, a file from one location to another recursively.
 
+Usage: zap [flags] [options]
+
+Use "zap options" for a list of global command-line options (applies to all commands).`
+	fmt.Println(message)
 }
 
 func init() {
